@@ -7,7 +7,7 @@ find_package(OpenVINO REQUIRED)
 
 include_directories(${OpenCV_INCLUDE_DIRS})
 
-add_executable(DetectorTester main.cpp)
+add_executable(DetectorTester src/main.cpp)
 
-target_link_libraries(DetectorTester PRIVATE openvino::runtime)
-target_link_libraries(DetectorTester PRIVATE ${OpenCV_LIBS})
+target_link_libraries(DetectorTester openvino::runtime)
+target_link_libraries(DetectorTester ${OpenCV_LIBS})
